@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
-import {User} from '../shared/models/user.model';
+import {User} from '../../shared/models/user.model';
 import {auth} from 'firebase';
 import {AngularFireAuth} from '@angular/fire/auth';
 
