@@ -1,0 +1,15 @@
+<div *ngIf="buttonType == 'google'">
+  <p>
+    <button mat-stroked-button appGoogleSignin>
+       <img src="../../../../assets/logos/google-logo.png" title="Google logo" alt="logo"/> {{ buttonName }}
+    </button>
+  </p>
+</div>
+
+<div *ngIf="buttonType == 'twitter'">
+  <p>
+    <button mat-stroked-button appTwitterSignin>
+      <img src="../../../../assets/logos/twitter-icon-black-transparent-27.png" title="Twitter logo" alt="logo"/> {{ buttonName }}
+    </button>
+  </p>
+</div>

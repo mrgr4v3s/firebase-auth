@@ -9,7 +9,7 @@ const routes: Routes = [
       .then(m => m.LoginModule)
   },
   {
-    path: ''
+    path: '', redirectTo: 'login', pathMatch: 'full'
   }
 ];
 

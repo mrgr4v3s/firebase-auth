@@ -28,6 +28,22 @@ export class AuthenticationService {
     this.userState.next(credentials.user);
   }
 
+  async emailPasswordSignIn(email: string, password: string) {
+    const credentials = await this.fireAuth.auth.signInWithEmailAndPassword(email, password);
+
+    this.userState.next(credentials.user);
+  }
+
+  async createUser(email: string, password: string) {
+    const credentials = await this.fireAuth.auth.createUserWithEmailAndPassword(email, password);
+
+    this.userState.next(credentials.user);
+  }
+
+  async resetUserPassword(email: string) {
+    await this.fireAuth.auth.sendPasswordResetEmail(email);
+  }
+
   get user(): Observable<User> {
     return this.user$;
   }
