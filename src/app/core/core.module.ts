@@ -3,14 +3,18 @@ import {AuthenticationService} from './services/authentication.service';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {GoogleSigninDirective} from './directives/google-signin.directive';
 import {TwitterSigninDirective} from './directives/twitter-signin.directive';
+import {AuthGuard} from './guards/auth.guard';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 
 @NgModule({
   imports: [
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [
-    AuthenticationService
+    AuthenticationService,
+    AuthGuard
   ],
   exports: [
     GoogleSigninDirective,

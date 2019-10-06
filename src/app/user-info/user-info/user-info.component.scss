@@ -1,0 +1,17 @@
+:host {
+  text-align: center;
+}
+
+.center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+}
+

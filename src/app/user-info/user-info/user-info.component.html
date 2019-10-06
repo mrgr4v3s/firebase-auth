@@ -1,0 +1,9 @@
+<div class="center">
+  <h3>Hello {{user.displayName}}!</h3>
+
+  <p>
+    <img [src]="user.photoURL" alt="user profile picture"/>
+  </p>
+
+  <button mat-stroked-button (click)="authService.signOut()">SignOut</button>
+</div>
